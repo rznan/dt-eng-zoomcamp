@@ -33,3 +33,13 @@ Bind mount (/host/path:/container/path): Direct mapping to host filesystem, more
 
 # command to access db on cli
 `uv run pgcli -h localhost -p 5432 -u root -d ny_taxi`
+
+# run ingest_data.py
+uv run python ingest_data.py \
+  --user=root \
+  --password=root \
+  --host=localhost \
+  --port=5432 \
+  --db=ny_taxi \
+  --table=yellow_taxi_trips \
+  --chunksize=100000
