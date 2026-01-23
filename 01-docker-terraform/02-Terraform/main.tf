@@ -8,13 +8,13 @@ terraform {
 }
 
 provider "google" {
-  project = "data-eng-zoomcamp-485022"
-  region  = "southamerica-east1"
+  project = var.project
+  region  = var.gcp_location
 }
 
 resource "google_storage_bucket" "demo-bucket" {
-  name          = "data-eng-zoomcamp-485022-fbucket"
-  location      = "southamerica-east1"
+  name          = var.gcs_bucket_name
+  location      = var.gcp_location
   force_destroy = true
 
   lifecycle_rule {
@@ -34,4 +34,10 @@ resource "google_storage_bucket" "demo-bucket" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+
+resource "google_bigquery_dataset" "default" {
+  dataset_id = var.bg_dataset_name
+  location = var.gcp_location
 }
