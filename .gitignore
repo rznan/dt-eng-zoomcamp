@@ -1,6 +1,7 @@
 # Data from pratices
 *.parquet
 *json
+*.csv
 
 # Local .terraform directories
 .terraform/
