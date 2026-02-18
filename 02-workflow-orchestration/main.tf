@@ -41,3 +41,9 @@ resource "google_bigquery_dataset" "default" {
   dataset_id = var.bg_dataset_name
   location = var.gcp_location
 }
+
+
+resource "google_bigquery_dataset" "ch3_pratice" {
+  dataset_id = var.bg_dataset_for_dtwarehouse_pratice
+  location = var.gcp_location
+}

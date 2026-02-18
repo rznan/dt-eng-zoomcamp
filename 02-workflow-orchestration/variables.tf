@@ -18,6 +18,12 @@ variable "bg_dataset_name" {
   default     = "NYtaxiDataset"
 }
 
+
+variable "bg_dataset_for_dtwarehouse_pratice" {
+  description = "My bigquery dataset name"
+  default     = "NYtaxiDatasetCh3Pratice"
+}
+
 variable "gcs_bucket_name" {
   description = "My storage bucket name"
   default     = "nytaxibucket"
