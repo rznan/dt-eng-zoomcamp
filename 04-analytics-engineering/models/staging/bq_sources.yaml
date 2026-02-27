@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw
+    description: >
+      From ny_taxi public dataset from 2019 to 2020
+    database: data-eng-zoomcamp-485022
+    schema: NYtaxiDataset
+
+    tables:
+      - name: green_tripdata
+        description: >
+          Green taxi trip records. Green taxis operate primarily in
+          outer boroughs (outside Manhattan).
+
+      - name: yellow_tripdata
+        description: >
+         Yellow taxi trips, primarily from Manhattan
